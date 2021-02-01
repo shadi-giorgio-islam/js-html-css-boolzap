@@ -12,3 +12,65 @@ body{
      #009688 0px 15vh, #D9DBD5 15vh 100vh);
 }
 /* fine regole generali */
+.container{
+  width: 1060px;
+  height: calc(100vh - 40px);
+  margin: 20px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+/* inizio contenitore a sinistra */
+/* contenitore */
+.container .inner-container-left{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+/* /contenitore */
+/* header */
+.container .inner-container-left .header-left{
+  height: 80px;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+/* /header */
+/* notification */
+.container .inner-container-left .notification{
+  height: 80px;
+  width: 100%;
+  background-color: #8EDAFC;
+}
+/* fine notification */
+/* search */
+.container .inner-container-left .search{
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  background-color: #FAFAFA;
+}
+/* /search */
+/* inner-search */
+.container .inner-container-left .search .inner-search{
+  background-color: white;
+  height: 20px;
+  width: calc(100% - 0px)
+}
+/* /inner-search */
+/* users */
+.container .inner-container-left .users{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+/* /users */
+/* user */
+.container .inner-container-left .users .user{
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #FAFAFA;
+}
+/* /user */
+/* fine contenitore a sinistra */
