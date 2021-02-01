@@ -224,12 +224,6 @@ a{
   top: -10px;
   color: #DCF8C6;
 }
-.container .inner-container-right .messages .riceved-message i{
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  color: white;
-}
 .container .inner-container-right .messages .riceved-message{
   background-color: white;
   border-radius: 10px;
@@ -239,6 +233,12 @@ a{
   text-align: left;
   max-width: 50%;
   position: relative;
+}
+.container .inner-container-right .messages .riceved-message i{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: white;
 }
 /* /messages */
 /* chat */
