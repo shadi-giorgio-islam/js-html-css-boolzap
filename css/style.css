@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 body{
   height: 100vh;
   width: 100%;
@@ -38,7 +41,7 @@ a{
 .container .inner-container-left .header-left{
   min-height: 60px;
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: #EDEDED;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,7 +138,7 @@ a{
   height: 80px;
   width: 100%;
   background-color: white;
-  border-bottom: 1px solid #FAFAFA;
+  border-bottom: 1px solid #EDEDED;
   display: flex;
   flex-direction: row;
 }
@@ -161,7 +164,7 @@ a{
 .container .inner-container-right .header-right{
   min-height: 60px;
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: #EDEDED;
   border-left: 1px solid #DADADA;
   display: flex;
   flex-direction: row;
@@ -203,6 +206,39 @@ a{
   height: 100%;
   width: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.container .inner-container-right .messages .sent-message{
+  background-color: #DCF8C6;
+  border-radius: 10px;
+  margin: 20px 80px 0 0;
+  padding: 10px;
+  text-align: left;
+  max-width: 50%;
+  position: relative;
+}
+.container .inner-container-right .messages .sent-message i{
+  position: absolute;
+  top: -10px;
+  color: #DCF8C6;
+}
+.container .inner-container-right .messages .riceved-message i{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: white;
+}
+.container .inner-container-right .messages .riceved-message{
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 0 0 80px;
+  align-self: flex-start;
+  padding: 10px;
+  text-align: left;
+  max-width: 50%;
+  position: relative;
 }
 /* /messages */
 /* chat */
