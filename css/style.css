@@ -9,11 +9,13 @@ body{
   width: 100%;
   overflow: hidden;
   background: linear-gradient(to bottom,
-     #009688 0px 15vh, #D9DBD5 15vh 100vh);
+   #009688 0px 15vh, #D9DBD5 15vh 100vh);
+  font-family: 'Lato', sans-serif;
 }
 /* fine regole generali */
 .container{
-  width: 1200px;
+  width: 80%;
+  min-width: 950px;
   height: calc(100vh - 40px);
   margin: 20px auto;
   background-color: white;
@@ -31,10 +33,39 @@ body{
 /* /contenitore */
 /* header */
 .container .inner-container-left .header-left{
-  min-height: 80px;
+  min-height: 60px;
   width: 100%;
   background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+/* header left left */
+.container .inner-container-left .header-left .header-left-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inner-container-left .header-left .header-left-left img{
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+}
+.container .inner-container-left .header-left .header-left-left h2{
+  font-size: 20px;
+}
+/* /header left left */
+/* header left right */
+.container .inner-container-left .header-left .header-left-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inner-container-left .header-left .header-left-right a i{
+  color: #B1B1B1;
+  margin-right: 20px;
+}
+/* /header left right */
 /* /header */
 /* notification */
 .container .inner-container-left .notification{
@@ -83,11 +114,43 @@ body{
 }
 /* header */
 .container .inner-container-right .header-right{
-  min-height: 80px;
+  min-height: 60px;
   width: 100%;
   background-color: #EAEAEA;
   border-left: 1px solid #DADADA;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+/* header right left */
+.container .inner-container-right .header-right .header-right-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inner-container-right .header-right .header-right-left img{
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+}
+.container .inner-container-right .header-right .header-right-left h2{
+  font-size: 20px;
+}
+.container .inner-container-right .header-right .header-right-left p{
+  color: #B1B1B1;
+}
+/* /header right left */
+/* header right right */
+.container .inner-container-right .header-right .header-right-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inner-container-right .header-right .header-right-right a i{
+  color: #B1B1B1;
+  margin-right: 20px;
+}
+/* /header right right */
 /* /header */
 /* messages */
 .container .inner-container-right .messages{
