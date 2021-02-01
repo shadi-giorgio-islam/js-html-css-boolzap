@@ -218,6 +218,7 @@ a{
   text-align: left;
   max-width: 50%;
   position: relative;
+  box-shadow: 0 3px 2px -2px gray;
 }
 .container .inner-container-right .messages .sent-message i{
   position: absolute;
@@ -234,6 +235,7 @@ a{
   text-align: left;
   max-width: 50%;
   position: relative;
+  box-shadow: 0 3px 2px -2px gray;
 }
 .container .inner-container-right .messages .riceved-message i{
   position: absolute;
