@@ -12,6 +12,9 @@ body{
    #009688 0px 15vh, #D9DBD5 15vh 100vh);
   font-family: 'Lato', sans-serif;
 }
+a{
+  text-decoration: none;
+}
 /* fine regole generali */
 .container{
   width: 80%;
@@ -72,6 +75,23 @@ body{
   min-height: 80px;
   width: 100%;
   background-color: #8EDAFC;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inner-container-left .notification i.fa-bell-slash{
+  color: #8EDAFC;
+  background-color: white;
+  margin: 10px 15px;
+  padding: 15px 12px;
+  border-radius: 50%;
+}
+.container .inner-container-left .notification h2{
+  font-size: 20px;
+}
+.container .inner-container-left .notification a p{
+  color: black;
+  text-decoration: underline;
 }
 /* fine notification */
 /* search */
