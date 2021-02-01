@@ -13,7 +13,7 @@ body{
 }
 /* fine regole generali */
 .container{
-  width: 1060px;
+  width: 1200px;
   height: calc(100vh - 40px);
   margin: 20px auto;
   background-color: white;
@@ -31,14 +31,14 @@ body{
 /* /contenitore */
 /* header */
 .container .inner-container-left .header-left{
-  height: 80px;
+  min-height: 80px;
   width: 100%;
   background-color: #EAEAEA;
 }
 /* /header */
 /* notification */
 .container .inner-container-left .notification{
-  height: 80px;
+  min-height: 80px;
   width: 100%;
   background-color: #8EDAFC;
 }
@@ -74,3 +74,35 @@ body{
 }
 /* /user */
 /* fine contenitore a sinistra */
+/* inizio contenitore a destra */
+.container .inner-container-right{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+/* header */
+.container .inner-container-right .header-right{
+  min-height: 80px;
+  width: 100%;
+  background-color: #EAEAEA;
+  border-left: 1px solid #DADADA;
+}
+/* /header */
+/* messages */
+.container .inner-container-right .messages{
+  background-image: url('../img/mine.jpg');
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+/* /messages */
+/* chat */
+.container .inner-container-right .chat{
+  min-height: 80px;
+  width: 100%;
+  background-color: #F3EEEA;
+  border-left: 1px solid #DADADA;
+}
+/* fine chat */
+/* fine contenitore a destra */
