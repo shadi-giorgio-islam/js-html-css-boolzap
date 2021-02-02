@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- inizio contenitore -->
-  <div class="container">
+  <div id="container">
     <!-- inizio contenitore a sinistra -->
     <div class="inner-container-left">
       <!-- inizio header sinistra -->
@@ -46,16 +46,16 @@
       <div class="search">
         <div class="inner-search">
           <a href="#"><i class="fas fa-search fa-lg"></i></a>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input v-model='searched' type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- fine barra ricerca -->
       <!-- inizio sezione users -->
-      <div id="users">
-        <div class="user" v-for = '(user, index) in contacts'>
+      <div class="users">
+        <div class="user" v-for = '(user, index) in contacts' v-if='user.name.toLowerCase().includes(searched.toLowerCase())'>
           <img :src="'img/avatar' + user.avatar + '.jpg'" alt="avatar">
           <h2>{{user.name}}</h2>
-        </div>        
+        </div>
       </div>
       <!-- fine sezione users -->
     </div>
@@ -69,7 +69,7 @@
             <img src="img/avatar_1.jpg" alt="avatar">
             <div class="text">
               <h2>Michele</h2>
-              <p>Ultimo accesso oggi alle</p>
+              <p>{{stato}}</p>
             </div>
           </div>
         <!-- fine header left left -->
@@ -84,32 +84,22 @@
       <!-- fine header destra -->
       <!-- inizio messaggi -->
       <div class="messages">
-        <div class="sent-message">
-          Ciao Michele &#128512;
-          <i class="fas fa-caret-down fa-2x"></i>
-        </div>
-        <div class="riceved-message">
-          Ciao Gio &#128516;
-          <i class="fas fa-caret-down fa-2x"></i>
-        </div>
-        <div class="sent-message">
-          Devo dirti una cosa
-          <i class="fas fa-caret-down fa-2x"></i>
-        </div>
-        <div class="riceved-message">
-          Dimmi
-          <i class="fas fa-caret-down fa-2x"></i>
-        </div>
-        <div class="sent-message">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <i class="fas fa-caret-down fa-2x"></i>
+        <div class="conversation" v-for='(message, index) in sent'>
+          <div class="sent-message">
+            {{sent[index]}}
+            <i class="fas fa-caret-down fa-2x"></i>
+          </div>
+          <div class="riceved-message">
+            {{riceved[index]}}
+            <i class="fas fa-caret-down fa-2x"></i>
+          </div>
         </div>
       </div>
       <!-- fine messaggi -->
       <!-- inizio chat -->
       <div class="chat">
         <a href="#"><i class="far fa-smile fa-2x"></i></a>
-        <input type="text" placeholder="Scrivi un messaggio">
+        <input v-model='chat' @keyup.enter="sentMessage(chat)" type="text" placeholder="Scrivi un messaggio">
         <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
       </div>
       <!-- fine chat -->
