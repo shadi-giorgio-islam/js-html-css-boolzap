@@ -53,8 +53,9 @@ var app = new Vue({
     sentMessage(array) {
       this.sent.push(array);
       this.stato = 'Sta scrivendo...';
+      this.riceved.push('...');
       setTimeout(()=> {
-        this.riceved.push('Ok');
+        this.riceved[this.riceved.length - 1]= 'Ok';
         this.stato = 'Online';
         console.log(this.riceved);
       }, 3000);
