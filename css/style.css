@@ -127,14 +127,14 @@ a{
 }
 /* /inner-search */
 /* users */
-.container .inner-container-left .users{
+.container .inner-container-left #users{
   height: 100%;
   width: 100%;
   overflow-y: scroll;
 }
 /* /users */
 /* user */
-.container .inner-container-left .users .user{
+.container .inner-container-left #users .user{
   height: 80px;
   width: 100%;
   background-color: white;
@@ -142,12 +142,12 @@ a{
   display: flex;
   flex-direction: row;
 }
-.container .inner-container-left .users .user img{
+.container .inner-container-left #users .user img{
   height: 60px;
   margin: 10px;
   border-radius: 50%;
 }
-.container .inner-container-left .users .user h2{
+.container .inner-container-left #users .user h2{
   margin: 10px 20px;
   font-size: 20px;
 }
