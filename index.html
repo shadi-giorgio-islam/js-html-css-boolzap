@@ -52,10 +52,12 @@
       <!-- fine barra ricerca -->
       <!-- inizio sezione users -->
       <div class="users">
-        <div class="user" v-for = '(user, index) in contacts' v-if='user.name.toLowerCase().includes(searched.toLowerCase())'>
-          <img :src="'img/avatar' + user.avatar + '.jpg'" alt="avatar">
-          <h2>{{user.name}}</h2>
-        </div>
+        <a href="#">
+          <div class="user" v-for = '(user, index) in contacts' v-if='user.name.toLowerCase().includes(searched.toLowerCase())' @click='clicked(index)'>
+            <img :src="'img/avatar' + user.avatar + '.jpg'" alt="avatar">
+            <h2>{{user.name}}</h2>
+          </div>
+        </a>
       </div>
       <!-- fine sezione users -->
     </div>
@@ -66,9 +68,9 @@
       <div class="header-right">
         <!-- inizio header left left -->
           <div class="header-right-left">
-            <img src="img/avatar_1.jpg" alt="avatar">
+            <img :src="'img/avatar' + contacts[indice].avatar + '.jpg'" alt="avatar">
             <div class="text">
-              <h2>Michele</h2>
+              <h2>{{contacts[indice].name}}</h2>
               <p>{{stato}}</p>
             </div>
           </div>

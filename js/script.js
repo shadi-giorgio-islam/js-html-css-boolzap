@@ -47,7 +47,8 @@ var app = new Vue({
     chat: '',
     sent: [],
     riceved: [],
-    stato: 'Online'
+    stato: 'Online',
+    indice: 0
   },
   methods: {
     sentMessage(array) {
@@ -59,6 +60,9 @@ var app = new Vue({
         this.stato = 'Online';
         console.log(this.riceved);
       }, 3000);
+    },
+    clicked(index){
+      this.indice = index;
     }
   }
 })
