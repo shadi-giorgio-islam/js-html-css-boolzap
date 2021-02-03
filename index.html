@@ -86,13 +86,13 @@
       <!-- fine header destra -->
       <!-- inizio messaggi -->
       <div class="messages">
-        <div class="conversation" v-for='(message, index) in sent'>
+        <div class="conversation" v-for='(message, index) in contacts[indice].sent'>
           <div class="sent-message">
-            {{sent[index]}}
+            {{contacts[indice].sent[index]}}
             <i class="fas fa-caret-down fa-2x"></i>
           </div>
           <div class="riceved-message">
-            {{riceved[index]}}
+            {{contacts[indice].riceved[index]}}
             <i class="fas fa-caret-down fa-2x"></i>
           </div>
         </div>
@@ -101,7 +101,7 @@
       <!-- inizio chat -->
       <div class="chat">
         <a href="#"><i class="far fa-smile fa-2x"></i></a>
-        <input v-model='chat' @keyup.enter="sentMessage(chat)" type="text" placeholder="Scrivi un messaggio">
+        <input v-model='contacts[indice].chat' @keyup.enter="sentMessage(contacts[indice].chat)" type="text" placeholder="Scrivi un messaggio">
         <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
       </div>
       <!-- fine chat -->
