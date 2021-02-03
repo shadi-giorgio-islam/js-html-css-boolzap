@@ -8,7 +8,8 @@ var app = new Vue({
       message: 'ok',
       sent: [],
       chat: '',
-      riceved: []
+      riceved: [],
+      stato: 'Online'
       },
       {
       name: 'Fabio',
@@ -16,7 +17,8 @@ var app = new Vue({
       message: 'ok',
       sent: [],
       chat: '',
-      riceved: []
+      riceved: [],
+      stato: 'Online'
       },
       {
         name: 'Samuele',
@@ -24,7 +26,8 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       },
       {
         name: 'Luciano',
@@ -32,7 +35,8 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       },
       {
         name: 'Marco',
@@ -40,7 +44,8 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       },
       {
         name: 'Anna',
@@ -48,7 +53,8 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       },
       {
         name: 'Sandro',
@@ -56,7 +62,8 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       },
       {
         name: 'Mario',
@@ -64,21 +71,21 @@ var app = new Vue({
         message: 'ok',
         sent: [],
         chat: '',
-        riceved: []
+        riceved: [],
+        stato: 'Online'
       }
     ],
     searched: '',
-    stato: 'Online',
     indice: 0
   },
   methods: {
     sentMessage(array) {
       this.contacts[this.indice].sent.push(array);
-      this.stato = 'Sta scrivendo...';
+      this.contacts[this.indice].stato = 'Sta scrivendo...';
       this.contacts[this.indice].riceved.push('...');
       setTimeout(()=> {
         this.contacts[this.indice].riceved[this.contacts[this.indice].riceved.length - 1]= 'Ok';
-        this.stato = 'Online';
+        this.contacts[this.indice].stato = 'Online';
         console.log(this.riceved);
       }, 3000);
     },

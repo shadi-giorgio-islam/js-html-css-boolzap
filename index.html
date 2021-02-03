@@ -55,7 +55,10 @@
         <a href="#">
           <div class="user" v-for = '(user, index) in contacts' v-if='user.name.toLowerCase().includes(searched.toLowerCase())' @click='clicked(index)'>
             <img :src="'img/avatar' + user.avatar + '.jpg'" alt="avatar">
-            <h2>{{user.name}}</h2>
+            <div class="last-message">
+              <h2>{{user.name}}</h2>
+              <p>{{user.riceved[user.riceved.length - 1]}}</p>
+            </div>
           </div>
         </a>
       </div>
@@ -71,7 +74,7 @@
             <img :src="'img/avatar' + contacts[indice].avatar + '.jpg'" alt="avatar">
             <div class="text">
               <h2>{{contacts[indice].name}}</h2>
-              <p>{{stato}}</p>
+              <p>{{contacts[indice].stato}}</p>
             </div>
           </div>
         <!-- fine header left left -->

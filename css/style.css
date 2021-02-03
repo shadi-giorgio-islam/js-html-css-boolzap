@@ -152,6 +152,11 @@ a{
   margin: 10px 20px;
   font-size: 20px;
 }
+#container .inner-container-left .users .user p{
+  margin-left: 20px;
+  font-size: 18px;
+  color: grey;
+}
 /* /user */
 /* fine contenitore a sinistra */
 /* inizio contenitore a destra */
