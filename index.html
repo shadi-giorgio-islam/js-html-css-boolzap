@@ -92,10 +92,12 @@
         <div class="conversation" v-for='(message, index) in contacts[indice].sent'>
           <div class="sent-message">
             {{contacts[indice].sent[index]}}
+            <p>{{contacts[indice].dateSent[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
           </div>
           <div class="riceved-message">
             {{contacts[indice].riceved[index]}}
+            <p>{{contacts[indice].dateRiceved[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
           </div>
         </div>

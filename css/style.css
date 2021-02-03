@@ -230,6 +230,11 @@ a{
   word-wrap: break-word;
   word-break: break-word;
 }
+#container .inner-container-right .messages p{
+  color: lightgrey;
+  font-size: 10px;
+  text-align: right;
+}
 #container .inner-container-right .messages .sent-message i{
   position: absolute;
   top: -10px;

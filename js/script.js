@@ -9,7 +9,9 @@ var app = new Vue({
       sent: [],
       chat: '',
       riceved: [],
-      stato: 'Online'
+      stato: 'Online',
+      dateSent: [],
+      dateRiceved: []
       },
       {
       name: 'Fabio',
@@ -18,7 +20,9 @@ var app = new Vue({
       sent: [],
       chat: '',
       riceved: [],
-      stato: 'Online'
+      stato: 'Online',
+      dateSent: [],
+      dateRiceved: []
       },
       {
         name: 'Samuele',
@@ -27,7 +31,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       },
       {
         name: 'Luciano',
@@ -36,7 +42,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       },
       {
         name: 'Marco',
@@ -45,7 +53,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       },
       {
         name: 'Anna',
@@ -54,7 +64,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       },
       {
         name: 'Sandro',
@@ -63,7 +75,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       },
       {
         name: 'Mario',
@@ -72,7 +86,9 @@ var app = new Vue({
         sent: [],
         chat: '',
         riceved: [],
-        stato: 'Online'
+        stato: 'Online',
+        dateSent: [],
+        dateRiceved: []
       }
     ],
     searched: '',
@@ -80,12 +96,15 @@ var app = new Vue({
   },
   methods: {
     sentMessage(array) {
+      let d = new Date();
       this.contacts[this.indice].sent.push(array);
       this.contacts[this.indice].stato = 'Sta scrivendo...';
       this.contacts[this.indice].riceved.push('...');
+      this.contacts[this.indice].dateSent.push(d.getHours()+':'+d.getMinutes());
       setTimeout(()=> {
         this.contacts[this.indice].riceved[this.contacts[this.indice].riceved.length - 1]= 'Ok';
         this.contacts[this.indice].stato = 'Online';
+        this.contacts[this.indice].dateRiceved.push(d.getHours()+':'+d.getMinutes());
         console.log(this.riceved);
       }, 3000);
     },
