@@ -141,6 +141,9 @@ var app = new Vue({
       else {
         this.contacts[this.indice].displayRiceved = 'active';
       }
+    },
+    deleteMessagesent(){
+      this.contacts[this.indice].sent.pop();
     }
   }
 })
