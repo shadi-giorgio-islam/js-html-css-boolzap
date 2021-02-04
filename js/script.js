@@ -12,8 +12,8 @@ var app = new Vue({
       stato: 'Online',
       dateSent: [],
       dateRiceved: [],
-      displaySent: 'no',
-      displayRiceved: 'no'
+      displaySent: [],
+      displayRiceved: []
       },
       {
       name: 'Fabio',
@@ -25,8 +25,8 @@ var app = new Vue({
       stato: 'Online',
       dateSent: [],
       dateRiceved: [],
-      displaySent: 'no',
-      displayRiceved: 'no'
+      displaySent: [],
+      displayRiceved: []
       },
       {
         name: 'Samuele',
@@ -38,8 +38,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       },
       {
         name: 'Luciano',
@@ -51,8 +51,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       },
       {
         name: 'Marco',
@@ -64,8 +64,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       },
       {
         name: 'Anna',
@@ -77,8 +77,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       },
       {
         name: 'Sandro',
@@ -90,8 +90,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       },
       {
         name: 'Mario',
@@ -103,8 +103,8 @@ var app = new Vue({
         stato: 'Online',
         dateSent: [],
         dateRiceved: [],
-        displaySent: 'no',
-        displayRiceved: 'no'
+        displaySent: [],
+        displayRiceved: []
       }
     ],
     searched: '',
@@ -126,24 +126,24 @@ var app = new Vue({
     clicked(index){
       this.indice = index;
     },
-    showBoxsent(){
-      if (this.contacts[this.indice].displaySent == 'active') {
-        this.contacts[this.indice].displaySent = 'no';
+    showBoxsent(index){
+      if (this.contacts[this.indice].displaySent[index] == 'active') {
+        this.contacts[this.indice].displaySent.splice(index, 1, 'no');
       }
       else {
-        this.contacts[this.indice].displaySent = 'active';
+        this.contacts[this.indice].displaySent.splice(index, 1, 'active');
       }
     },
-    showBoxriceved(){
-      if (this.contacts[this.indice].displayRiceved == 'active') {
-        this.contacts[this.indice].displayRiceved = 'no';
+    showBoxriceved(index){
+      if (this.contacts[this.indice].displayRiceved[index] == 'active') {
+        this.contacts[this.indice].displayRiceved.splice(index, 1, 'no');
       }
       else {
-        this.contacts[this.indice].displayRiceved = 'active';
+        this.contacts[this.indice].displayRiceved.splice(index, 1, 'active');
       }
     },
-    deleteMessagesent(){
-      this.contacts[this.indice].sent.pop();
+    deleteMessagesent(index){
+      this.contacts[this.indice].sent.splice(index, 1);
     }
   }
 })

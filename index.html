@@ -94,10 +94,10 @@
             {{contacts[indice].sent[index]}}
             <p>{{contacts[indice].dateSent[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
-            <a href="#" @click='showBoxsent'><i class="fas fa-angle-down"></i></a>
-            <div class="dropbox" :class='contacts[indice].displaySent'>
+            <a href="#" @click='showBoxsent(index)'><i class="fas fa-angle-down"></i></a>
+            <div class="dropbox" :class='contacts[indice].displaySent[index]'>
               <ul>
-                <li><a href="#" @click='deleteMessagesent'>Delete message</a></li>
+                <li><a href="#" @click='deleteMessagesent(index)'>Delete message</a></li>
                 <li><a href="#">Message info</a></li>
               </ul>
             </div>
@@ -106,8 +106,8 @@
             {{contacts[indice].riceved[index]}}
             <p>{{contacts[indice].dateRiceved[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
-            <a href="#" @click='showBoxriceved'><i class="fas fa-angle-down"></i></a>
-            <div class="dropbox" :class='contacts[indice].displayRiceved'>
+            <a href="#" @click='showBoxriceved(index)'><i class="fas fa-angle-down"></i></a>
+            <div class="dropbox" :class='contacts[indice].displayRiceved[index]'>
               <ul>
                 <li><a href="#">Delete message</a></li>
                 <li><a href="#">Message info</a></li>
