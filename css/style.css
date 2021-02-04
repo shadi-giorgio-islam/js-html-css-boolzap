@@ -15,6 +15,9 @@ body{
    #009688 0px 15vh, #D9DBD5 15vh 100vh);
   font-family: 'Lato', sans-serif;
 }
+ul{
+  list-style: none;
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -237,6 +240,26 @@ a{
   color: lightgrey;
   font-size: 10px;
   text-align: right;
+}
+#container .inner-container-right .messages .dropbox{
+  background-color: white;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  border-radius: 5px;
+  width: 130px;
+  text-align: center;
+  display: none;
+}
+#container .inner-container-right .messages .dropbox.active{
+  display: block;
+}
+#container .inner-container-right .messages .dropbox ul li{
+  padding: 10px 0;
+  color: grey;
+}
+#container .inner-container-right .messages .dropbox ul li:first-child{
+  border-bottom: 1px solid lightgrey;
 }
 #container .inner-container-right .messages .sent-message i.fa-caret-down{
   position: absolute;

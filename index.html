@@ -94,13 +94,25 @@
             {{contacts[indice].sent[index]}}
             <p>{{contacts[indice].dateSent[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
-            <a href="#"><i class="fas fa-angle-down"></i></a>
+            <a href="#" @click='showBoxsent'><i class="fas fa-angle-down"></i></a>
+            <div class="dropbox" :class='contacts[indice].displaySent'>
+              <ul>
+                <li><a href="#">Delete message</a></li>
+                <li><a href="#">Message info</a></li>
+              </ul>
+            </div>
           </div>
           <div class="riceved-message">
             {{contacts[indice].riceved[index]}}
             <p>{{contacts[indice].dateRiceved[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
-            <a href="#"><i class="fas fa-angle-down"></i></a>
+            <a href="#" @click='showBoxriceved'><i class="fas fa-angle-down"></i></a>
+            <div class="dropbox" :class='contacts[indice].displayRiceved'>
+              <ul>
+                <li><a href="#">Delete message</a></li>
+                <li><a href="#">Message info</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

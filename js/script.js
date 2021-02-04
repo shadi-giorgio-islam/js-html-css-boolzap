@@ -11,7 +11,9 @@ var app = new Vue({
       riceved: [],
       stato: 'Online',
       dateSent: [],
-      dateRiceved: []
+      dateRiceved: [],
+      displaySent: 'no',
+      displayRiceved: 'no'
       },
       {
       name: 'Fabio',
@@ -22,7 +24,9 @@ var app = new Vue({
       riceved: [],
       stato: 'Online',
       dateSent: [],
-      dateRiceved: []
+      dateRiceved: [],
+      displaySent: 'no',
+      displayRiceved: 'no'
       },
       {
         name: 'Samuele',
@@ -33,7 +37,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       },
       {
         name: 'Luciano',
@@ -44,7 +50,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       },
       {
         name: 'Marco',
@@ -55,7 +63,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       },
       {
         name: 'Anna',
@@ -66,7 +76,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       },
       {
         name: 'Sandro',
@@ -77,7 +89,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       },
       {
         name: 'Mario',
@@ -88,7 +102,9 @@ var app = new Vue({
         riceved: [],
         stato: 'Online',
         dateSent: [],
-        dateRiceved: []
+        dateRiceved: [],
+        displaySent: 'no',
+        displayRiceved: 'no'
       }
     ],
     searched: '',
@@ -105,11 +121,26 @@ var app = new Vue({
         this.contacts[this.indice].riceved[this.contacts[this.indice].riceved.length - 1]= 'Ok';
         this.contacts[this.indice].stato = 'Online';
         this.contacts[this.indice].dateRiceved.push(d.getHours()+':'+d.getMinutes());
-        console.log(this.riceved);
       }, 3000);
     },
     clicked(index){
       this.indice = index;
+    },
+    showBoxsent(){
+      if (this.contacts[this.indice].displaySent == 'active') {
+        this.contacts[this.indice].displaySent = 'no';
+      }
+      else {
+        this.contacts[this.indice].displaySent = 'active';
+      }
+    },
+    showBoxriceved(){
+      if (this.contacts[this.indice].displayRiceved == 'active') {
+        this.contacts[this.indice].displayRiceved = 'no';
+      }
+      else {
+        this.contacts[this.indice].displayRiceved = 'active';
+      }
     }
   }
 })
