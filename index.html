@@ -57,6 +57,7 @@
             <img :src="'img/avatar' + user.avatar + '.jpg'" alt="avatar">
             <div class="last-message">
               <h2>{{user.name}}</h2>
+              <span>{{user.dateRiceved[user.dateRiceved.length - 1]}}</span>
               <p>{{user.riceved[user.riceved.length - 1]}}</p>
             </div>
           </div>
@@ -109,7 +110,7 @@
             <a href="#" @click='showBoxriceved(index)'><i class="fas fa-angle-down"></i></a>
             <div class="dropbox" :class='contacts[indice].displayRiceved[index]'>
               <ul>
-                <li><a href="#">Delete message</a></li>
+                <li><a href="#" @click='deleteMessagericeved(index)'>Delete message</a></li>
                 <li><a href="#">Message info</a></li>
               </ul>
             </div>

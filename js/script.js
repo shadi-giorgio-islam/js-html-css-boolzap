@@ -144,6 +144,9 @@ var app = new Vue({
     },
     deleteMessagesent(index){
       this.contacts[this.indice].sent.splice(index, 1);
+    },
+    deleteMessagericeved(index){
+      this.contacts[this.indice].riceved.splice(index, 1);
     }
   }
 })
