@@ -261,6 +261,7 @@ a{
   width: 130px;
   text-align: center;
   display: none;
+  z-index: 1;
 }
 #container .inner-container-right .messages .dropbox.active{
   display: block;
@@ -296,6 +297,9 @@ a{
   box-shadow: 0 3px 2px -2px gray;
   word-wrap: break-word;
   word-break: break-word;
+}
+#container .inner-container-right .messages .riceved-message.none{
+  display: none;
 }
 #container .inner-container-right .messages .riceved-message i.fa-caret-down{
   position: absolute;

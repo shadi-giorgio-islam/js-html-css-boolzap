@@ -13,7 +13,8 @@ var app = new Vue({
       dateSent: [],
       dateRiceved: [],
       displaySent: [],
-      displayRiceved: []
+      displayRiceved: [],
+      delete: []
       },
       {
       name: 'Fabio',
@@ -26,7 +27,8 @@ var app = new Vue({
       dateSent: [],
       dateRiceved: [],
       displaySent: [],
-      displayRiceved: []
+      displayRiceved: [],
+      delete: []
       },
       {
         name: 'Samuele',
@@ -39,7 +41,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       },
       {
         name: 'Luciano',
@@ -52,7 +55,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       },
       {
         name: 'Marco',
@@ -65,7 +69,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       },
       {
         name: 'Anna',
@@ -78,7 +83,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       },
       {
         name: 'Sandro',
@@ -91,7 +97,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       },
       {
         name: 'Mario',
@@ -104,7 +111,8 @@ var app = new Vue({
         dateSent: [],
         dateRiceved: [],
         displaySent: [],
-        displayRiceved: []
+        displayRiceved: [],
+        delete: []
       }
     ],
     searched: '',
@@ -147,6 +155,7 @@ var app = new Vue({
     },
     deleteMessagericeved(index){
       this.contacts[this.indice].riceved.splice(index, 1);
+      this.contacts[this.indice].delete.splice(index, 1, 'none');
     }
   }
 })

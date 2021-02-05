@@ -103,7 +103,7 @@
               </ul>
             </div>
           </div>
-          <div class="riceved-message">
+          <div class="riceved-message" :class="contacts[indice].delete[index]">
             {{contacts[indice].riceved[index]}}
             <p>{{contacts[indice].dateRiceved[index]}}</p>
             <i class="fas fa-caret-down fa-2x"></i>
