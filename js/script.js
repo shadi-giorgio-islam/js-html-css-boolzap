@@ -121,15 +121,25 @@ var app = new Vue({
   methods: {
     sentMessage(array) {
       let d = new Date();
+      let hours = d.getHours();
+      // leading zero hours
+      if (hours < 10){
+        hours = '0' + hours;
+      }
+      let minutes = d.getMinutes();
+      // leading zero minutes
+      if (minutes < 10){
+        minutes = '0' + minutes;
+      }
       this.contacts[this.indice].sent.push(array);
       this.contacts[this.indice].chat = '';
       this.contacts[this.indice].stato = 'Sta scrivendo...';
-      this.contacts[this.indice].dateSent.push(d.getHours()+':'+d.getMinutes());
+      this.contacts[this.indice].dateSent.push(hours+':'+minutes);
       setTimeout(()=> {
         this.contacts[this.indice].riceved.push('ok');
         this.contacts[this.indice].delete.splice(this.contacts[this.indice].riceved.length - 1, 1, 'yes');
         this.contacts[this.indice].stato = 'Online';
-        this.contacts[this.indice].dateRiceved.push(d.getHours()+':'+d.getMinutes());
+        this.contacts[this.indice].dateRiceved.push(hours+':'+minutes);
       }, 3000);
     },
     // prendere l indice del contatto
